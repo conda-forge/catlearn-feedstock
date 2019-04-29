@@ -1,5 +1,5 @@
 {% set name = "catlearn" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/C/CatLearn/CatLearn-{{ version }}.tar.gz
-  sha256: c71f6395e984fec3d081ac8fb169188126ac4bd7b3e61620df6272cf0b18af04
+  sha256: 50b87c212675cf0afbab0d03647cfa4ea745c95bd9e2a132eab88c4d6bb253c0
 
 build:
   noarch: python
