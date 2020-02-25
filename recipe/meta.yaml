@@ -21,6 +21,8 @@ requirements:
     - python
     - pip
   run:
+    - python
+    - pip
     - ase >=3.17.0
     - click >=6.7
     - cycler >=0.10.0
@@ -47,6 +49,8 @@ requirements:
 test:
   imports:
     - catlearn
+  commands:
+    - pip check
 
 about:
   home: https://github.com/SUNCAT-Center/CatLearn
