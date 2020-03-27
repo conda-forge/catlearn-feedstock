@@ -1,5 +1,5 @@
 {% set name = "catlearn" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/C/CatLearn/CatLearn-{{ version }}.tar.gz
-  sha256: 50b87c212675cf0afbab0d03647cfa4ea745c95bd9e2a132eab88c4d6bb253c0
+  sha256: 5af6622e4660f3b5760267fccd9c5da6f1a4a88aad0aacc044067a68f92e2bbd
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -57,7 +57,7 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'A machine learning environment for atomic-scale modeling in surface science and catalysis.'
+  summary: A machine learning environment for atomic-scale modeling in surface science and catalysis.
 
   description: |
     Utilities for building and testing atomic machine learning models. 
