@@ -21,7 +21,6 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - pip
     - ase >=3.17.0
     - click >=6.7
     - cycler >=0.10.0
@@ -48,6 +47,7 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - catlearn
   commands:
