@@ -6,23 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/C/CatLearn/CatLearn-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/C/CatLearn/CatLearn-{{ version }}.tar.gz
   sha256: 5af6622e4660f3b5760267fccd9c5da6f1a4a88aad0aacc044067a68f92e2bbd
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - {{ compiler('c') }}
   host:
-    - python
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python
-    - pip
+    - python >={{ python_min }}
     - ase >=3.17.0
     - click >=6.7
     - cycler >=0.10.0
@@ -47,6 +45,9 @@ requirements:
     - werkzeug >=0.14.1
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - catlearn
   commands:
